@@ -1,29 +1,29 @@
 #include<stdio.h>
 int main()
 {
-
-    int i;
+    int i=0;
     int countv=0;
     int countc=0;
     char str[100];
-    printf("Enter sentence:");
-    scanf("%[A-Za-z]",&str);
-     i=0;
-    while(i=0;i<100;i++)
+    printf("Enter sentence(Enter full stop  when ending):");
+    gets(str);
+    while(str[i]!='\0')
     {
-        if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u')
+        
+    
+        if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||str[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U')
+
         {
             countv++;
         }
-        else if(str[i]==' ')
+        else if((str[i]>='A'&&str[i]<='Z')||(str[i]>='a'&&str[i]<='z'))
         {
-            break;
+            countc++;
         }
-        else
-        {
-        	countc++;
-		}
+        i++;
+    
     }
+    
     printf("\nVowels entered are:%d",countv);
     printf("\nConsonents entered are:%d",countc);
     return 0;
